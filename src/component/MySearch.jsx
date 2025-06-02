@@ -81,7 +81,7 @@ const MySearch = ({ onToggleFavorite, favorites }) => {
                         <div>
                             <div>{item.bsNm}</div>
                             <div style={{ fontSize: "12px", color: "#888" }}>
-                                정류장 ID: {item.bsId}
+                                {item.routeList}
                             </div>
                         </div>
                     ),
@@ -173,7 +173,7 @@ const MySearch = ({ onToggleFavorite, favorites }) => {
         message.success({
             content: isFavorite
                 ? "나의 버스에서 제거되었습니다."
-                : "나의 버스에서 추가되었습니다.",
+                : "나의 버스에 추가되었습니다.",
             key,
             duration: 2,
         });

@@ -1,5 +1,5 @@
 .container {
-    padding: 1rem;
+    padding: 3rem;
     box-sizing: border-box;
     max-width: 1200px;
     margin: 0 auto;
@@ -11,19 +11,28 @@
     flex-direction: row;
     gap: 1rem;
     margin-top: 1rem;
-    padding: 1rem;
+    padding: 1rem 1rem 3rem 1rem;
+    /*background-color: yellow;*/
 }
 
 .favoritesWrapper {
-    width: 50%;
+    /*width: 50%;*/
+    width: 45rem;
+    /*background-color: orange;*/
 }
 
 .cardWrapper {
-    width: 50%;
+    /*width: 50%;*/
     overflow-y: auto;
+    /*background-color: red;*/
+    width: 30rem;
+
 }
 
 .favoritesTitle {
+    margin-bottom: 1rem;
+}
+.favoritesTitle2 {
     margin-bottom: 1rem;
 }
 
@@ -80,6 +89,7 @@
 .cardTitle {
     display: flex;
     align-items: center;
+    /*background-color: mediumspringgreen;*/
 }
 
 .cardTitleText {
@@ -89,67 +99,100 @@
     width: 400px;
 }
 
-.refreshTimer {
-    margin-left: 1rem;
-    color: #1890ff;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100px;
-}
+/*.refreshTimer {*/
+/*    margin-left: 1rem;*/
+/*    color: #1890ff;*/
+/*    white-space: nowrap;*/
+/*    overflow: hidden;*/
+/*    text-overflow: ellipsis;*/
+/*    width: 100px;*/
+/*}*/
 
 .refreshButton {
-    /* margin-left: 1rem; */
+    display: inline-flex;
+    align-items: center;
+    color: #1890ff;
+    width: 5rem;
+    /*gap: 8px; */
 }
 
 .arrivalList {
     max-height: 400px;
     overflow-y: auto;
+    /*background-color: antiquewhite;*/
+}
+
+.noPadding{
+    &>div:first-child {
+       height: 70px;
+    }
+    &>div:nth-child(2){
+        padding: 0;
+    }
 }
 
 .arrivalItem {
     border-bottom: 1px solid #f0f0f0;
+    /*background-color: darkblue;*/
+
+
 }
 
+
 .arrivalContent {
-    width: 100;
-    min-height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    /*width: 100;*/
+    /*min-height: 60px;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+    /*background-color: cadetblue;*/
+    width: 100%;
 }
 
 .routeInfo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 4px;
+    /*margin-bottom: 4px;*/
+    /*background-color: chocolate;*/
+
 }
 
-.routeNo,
-.arrivalState,
-.vehicleNo {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 2px 0;
+.routeNo{
+    /*background-color: red;*/
+    font-weight: bold;
+    margin-left: 1.5rem;
 }
+
+.arrivalState{
+    margin-right: 1.5rem;
+
+}
+/*.vehicleNo {*/
+/*    white-space: nowrap;*/
+/*    overflow: hidden;*/
+/*    text-overflow: ellipsis;*/
+/*    padding: 2px 0;*/
+/*}*/
 
 .loadingMessage {
     text-align: center;
     padding: 1rem;
 }
 
-.ant-card .ant-card-body {
-    padding: 0 !important;
-}
+/*.ant-card .ant-card-body {*/
+/*    padding: 0 !important;*/
+/*}*/
 
 /* 반응형 스타일 */
-@media (max-width: 1024px) {
+@media (max-width: 1165px) {
     /* 태블릿 */
     .container {
-        padding: 0.5rem;
+        padding: 2rem;
         min-height: auto;
+    }
+    .favoritesTitle2 {
+        margin-top: 1rem;
     }
 
     .contentWrapper {
@@ -168,7 +211,8 @@
     }
 
     .cardTitleText {
-        width: 250px;
+        /*width: 250px;*/
+        width: 100%;
     }
 
     .refreshTimer {
@@ -179,10 +223,13 @@
 @media (max-width: 768px) {
     /* 모바일 */
     .container {
-        padding: 0.5rem;
+        padding: 2rem;
         width: 100%;
         box-sizing: border-box;
         min-height: 100vh;
+    }
+    .favoritesTitle2 {
+        margin-top: 1rem;
     }
 
     .contentWrapper {
@@ -202,6 +249,7 @@
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
     }
+
 
     .listItemContent {
         min-height: 60px;
@@ -225,12 +273,9 @@
         font-size: 0.85rem;
     }
 
-    .cardTitle {
-        flex-wrap: wrap;
-    }
 
     .cardTitleText {
-        width: 150px;
+        /*width: 150px;*/
         font-size: 0.9rem;
     }
 
@@ -257,7 +302,10 @@
 @media (max-width: 425px) {
     /* 작은 모바일 */
     .container {
-        padding: 0.25rem;
+        padding: 0.8rem;
+    }
+    .favoritesTitle2 {
+        margin-top: 1rem;
     }
 
     .contentWrapper {
@@ -265,7 +313,7 @@
     }
 
     .cardTitleText {
-        width: 120px;
+        /*width: 120px;*/
         font-size: 0.85rem;
     }
 
